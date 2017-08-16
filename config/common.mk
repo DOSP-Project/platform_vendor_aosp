@@ -1,4 +1,4 @@
-# Copyright (C) 2016 The JDCTeam
+# Copyright (C) 2017 The DOSP Team
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,9 +15,9 @@
 # include definitions for SDCLANG
 include vendor/aosp/sdclang/sdclang.mk
 
-include vendor/aosp/config/version.mk
+include vendor/dosp/config/version.mk
 
-PRODUCT_BRAND ?= JDCTeam
+PRODUCT_BRAND ?= DOSPTeam
 
 # Use signing keys for user builds
 ifeq ($(TARGET_BUILD_VARIANT),user)
@@ -26,22 +26,22 @@ endif
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
-    vendor/aosp/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/aosp/prebuilt/common/bin/50-base.sh:system/addon.d/50-base.sh \
+    vendor/dosp/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/dosp/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/dosp/prebuilt/common/bin/50-base.sh:system/addon.d/50-base.sh \
 
 # Bootanimation
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
+    vendor/dosp/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 
 
 DEVICE_PACKAGE_OVERLAYS += \
-    vendor/aosp/overlay/common \
-    vendor/aosp/overlay/dictionaries
+    vendor/dosp/overlay/common \
+    vendor/dosp/overlay/dictionaries
 
 # EXT4/F2FS format script
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/bin/format.sh:install/bin/format.sh
+    vendor/dosp/prebuilt/common/bin/format.sh:install/bin/format.sh
 
 # Custom JDCTeam packages
 PRODUCT_PACKAGES += \
@@ -88,28 +88,30 @@ PRODUCT_PACKAGES += \
 
 # Backup Services whitelist
 PRODUCT_COPY_FILES += \
-    vendor/aosp/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
+    vendor/dosp/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
 
-# For keyboard gesture typing
-ifneq ($(filter jdc_jflte jdc_onyx,$(TARGET_PRODUCT)),)
+# Proprietary latinime libs needed for Keyboard swyping
+ifneq ($(filter arm64,$(TARGET_ARCH)),)
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinime.so
+     vendor/dosp/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so \
+     vendor/dosp/prebuilt/common/lib/libjni_latinime.so:system/lib/libjni_latinime.so
 else
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinime.so
+    vendor/dosp/prebuilt/common/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinimegoogle.so \
+    vendor/dosp/prebuilt/common/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so
 endif
 
 # init.d support
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner
+    vendor/dosp/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner
 
 # JDC-specific init file
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/etc/init.local.rc:root/init.jdc.rc
+    vendor/dosp/prebuilt/common/etc/init.local.rc:root/init.jdc.rc
 
 # Copy over added mimetype supported in libcore.net.MimeUtils
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/lib/content-types.properties:system/lib/content-types.properties
+    vendor/dosp/prebuilt/common/lib/content-types.properties:system/lib/content-types.properties
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
@@ -127,7 +129,7 @@ PRODUCT_PACKAGES += \
 
 # Changelog
 PRODUCT_COPY_FILES += \
-    vendor/aosp/Changelog.md:system/etc/Changelog.md
+    vendor/dosp/Changelog.md:system/etc/Changelog.md
 
 # Needed by some RILs and for some gApps packages
 PRODUCT_PACKAGES += \
@@ -144,7 +146,7 @@ USE_DEX2OAT_DEBUG ?= false
 # Magisk
 ifeq ($(WITH_ROOT),true)
  PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/magisk/Magisk.zip:install/magisk/Magisk.zip
+    vendor/dosp/prebuilt/common/magisk/Magisk.zip:install/magisk/Magisk.zip
 else
 $(warning Root method is undefined, please use 'WITH_ROOT := true' to define it)
 endif
