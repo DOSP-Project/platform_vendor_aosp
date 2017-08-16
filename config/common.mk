@@ -144,12 +144,8 @@ PRODUCT_PACKAGES += \
 USE_DEX2OAT_DEBUG ?= false
 
 # Magisk
-ifeq ($(WITH_ROOT),true)
- PRODUCT_COPY_FILES += \
+PRODUCT_COPY_FILES += \
     vendor/dosp/prebuilt/common/magisk/Magisk.zip:install/magisk/Magisk.zip
-else
-$(warning Root method is undefined, please use 'WITH_ROOT := true' to define it)
-endif
 
 # TCM (TCP Connection Management)
 PRODUCT_PACKAGES += \
