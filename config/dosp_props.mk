@@ -40,3 +40,8 @@ else
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.device.cache_dir=/cache
 endif
+
+#Enable ADB authentication
+ ifneq ($(TARGET_BUILD_VARIANT),eng)
+ ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
+ endif
