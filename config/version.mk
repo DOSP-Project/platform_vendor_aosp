@@ -13,12 +13,23 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#JDCTeam versioning
-ifndef JDC_BUILD_TYPE
-    JDC_BUILD_TYPE := STABLE
-endif
-
-JDC_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d)-$(JDC_BUILD_TYPE)
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.jdc.version=$(JDC_VERSION)
+#DOSP-OS Versioning
+ DOSP_VERSION = 1.0
+ 
+ ifndef DOSP_BUILD_TYPE
+ DOSP_BUILD_TYPE := UNOFFICIAL
+  endif		 
+  		 
+ DOSP_MOD_VERSION := DOSP-OS-$(DOSP_VERSION)-$(DOSP_BUILD)-$(shell date -u +%Y%m%d)-$(DOSP_BUILD_TYPE)
+ 
+ PRODUCT_PROPERTY_OVERRIDES += \
+  ro.dosp.version=$(DOSP_VERSION) \
+  ro.dosp.releasetype=$(DOSP_BUILD_TYPE) \
+  ro.mod.version=$(DOSP_BUILD_TYPE)-$(DOSP_VERSION)
+ 
+ OSMIUM_DISPLAY_VERSION := $(DOSP_MOD_VERSION)
+  		  
+  	 PRODUCT_PROPERTY_OVERRIDES += \
+  		 ro.dosp.display.version=$(DOSP_DISPLAY_VERSION)
+View  
+3  osmium.devices
