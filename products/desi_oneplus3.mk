@@ -1,4 +1,4 @@
-# Copyright (C) 2017 The JDC Project
+# Copyright (C) 2017 The DOSP Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,11 +15,11 @@
 # Inherit AOSP device configuration for oneplus3/3t
 $(call inherit-product, device/oneplus/oneplus3/aosp_oneplus3.mk)
 
-PRODUCT_NAME := jdc_oneplus3
+PRODUCT_NAME := DOSP_oneplus3
 PRODUCT_DEVICE := oneplus3
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
 
-DEVICE_MAINTAINERS := Josh Fox (xlxfoxxlx)
+DEVICE_MAINTAINERS := Kukun7610
 
 WITH_ROOT := true
