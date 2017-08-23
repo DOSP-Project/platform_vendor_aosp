@@ -1,4 +1,4 @@
-# Copyright (C) 2016 The JDCTeam
+# Copyright (C) 2016 The DOSP Team
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,12 +16,12 @@
 $(call inherit-product, device/oneplus/oneplus2/aosp_oneplus2.mk)
 
 # Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := jdc_oneplus2
+PRODUCT_NAME := DOSP_oneplus2
 PRODUCT_DEVICE := oneplus2
 PRODUCT_BRAND := oneplus
 PRODUCT_MANUFACTURER := Oneplus
 PRODUCT_MODEL := Oneplus 2
 
-DEVICE_MAINTAINERS := Muhammad Hamza (MZO9400)
+DEVICE_MAINTAINERS := XYZ
 
 WITH_ROOT := true
