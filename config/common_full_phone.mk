@@ -3,4 +3,4 @@ $(call inherit-product, vendor/dosp/config/common.mk)
 
 $(call inherit-product, vendor/dosp/config/telephony.mk)
 
-$(call inherit-product, vendor/dosp/config/jdc_props.mk)
+$(call inherit-product, vendor/dosp/config/dosp_props.mk)
