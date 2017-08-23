@@ -1,4 +1,4 @@
-# Copyright (C) 2017 The JDC Project
+# Copyright (C) 2017 The DOSP Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,10 +16,10 @@
 $(call inherit-product, device/oneplus/onyx/aosp_onyx.mk)
 
 # Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := jdc_onyx
+PRODUCT_NAME := DOSP_onyx
 PRODUCT_DEVICE := onyx
 PRODUCT_BRAND := oneplus
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_MODEL := OnePlus X
 
-DEVICE_MAINTAINERS := Nimit Mehta (CheckYourScreen)
+DEVICE_MAINTAINERS := Kukun7610
