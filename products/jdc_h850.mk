@@ -16,12 +16,12 @@
 $(call inherit-product, device/lge/h850/aosp_h850.mk)
 
 # Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := jdc_h850
+PRODUCT_NAME := DOSP_h850
 PRODUCT_DEVICE := h850
 PRODUCT_BRAND := lge
 PRODUCT_MANUFACTURER := LGE
 PRODUCT_MODEL := LG-H850
 
-DEVICE_MAINTAINERS := Mattia D'Alleva (AntaresOne)
+DEVICE_MAINTAINERS := kukun7610
 
 WITH_ROOT := true
