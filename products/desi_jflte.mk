@@ -1,4 +1,4 @@
-# Copyright (C) 2016 The JDCTeam
+# Copyright (C) 2016 The DOSPTeam
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,12 +16,12 @@
 $(call inherit-product, device/samsung/jflte/aosp_jflte.mk)
 
 # Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := jdc_jflte
+PRODUCT_NAME := DOSP_jflte
 PRODUCT_DEVICE := jflte
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := Samsung
 PRODUCT_MODEL := Samsung Galaxy S4
 
-DEVICE_MAINTAINERS := Zanin Marco (B--B)
+DEVICE_MAINTAINERS := Kukun7610
 
 WITH_ROOT := true
