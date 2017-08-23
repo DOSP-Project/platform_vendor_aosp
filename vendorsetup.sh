@@ -17,7 +17,7 @@ if [ -z ${variant} ]; then
 fi
 
 for variant in "${ARRAY[@]}"; do
- for combo in $(ls vendor/aosp/products/jdc_*.mk | sed -e 's/vendor\/aosp\/products\///' -e "s/.mk/-$variant/"); do
+ for combo in $(ls vendor/dosp/products/desi_*.mk | sed -e 's/vendor\/aosp\/products\///' -e "s/.mk/-$variant/"); do
  add_lunch_combo ${combo}
  done
 done
