@@ -1,4 +1,4 @@
-# Copyright (C) 2017 AospExtended ROM
+# Copyright (C) 2017 DOSP Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,17 +17,17 @@
 TARGET_BOOT_ANIMATION_RES ?= undefined
 
 ifeq ($(TARGET_BOOT_ANIMATION_RES),480)
-     PRODUCT_COPY_FILES += vendor/aosp/prebuilt/common/media/AEX-480.zip:system/media/bootanimation.zip
+     PRODUCT_COPY_FILES += vendor/dosp/prebuilt/common/media/DOSP-480.zip:system/media/bootanimation.zip
 else ifeq ($(TARGET_BOOT_ANIMATION_RES),540)
-     PRODUCT_COPY_FILES += vendor/aosp/prebuilt/common/media/AEX-540.zip:system/media/bootanimation.zip
+     PRODUCT_COPY_FILES += vendor/dosp/prebuilt/common/media/DOSP-540.zip:system/media/bootanimation.zip
 else ifeq ($(TARGET_BOOT_ANIMATION_RES),720)
-     PRODUCT_COPY_FILES += vendor/aosp/prebuilt/common/media/AEX-720.zip:system/media/bootanimation.zip
+     PRODUCT_COPY_FILES += vendor/dosp/prebuilt/common/media/DOSP-720.zip:system/media/bootanimation.zip
 else ifeq ($(TARGET_BOOT_ANIMATION_RES),1080)
-     PRODUCT_COPY_FILES += vendor/aosp/prebuilt/common/media/AEX-1080.zip:system/media/bootanimation.zip
+     PRODUCT_COPY_FILES += vendor/dosp/prebuilt/common/media/DOSP-1080.zip:system/media/bootanimation.zip
 else ifeq ($(TARGET_BOOT_ANIMATION_RES),undefined)
      $(warning Target bootanimation res is undefined, using generic bootanimation )
-     PRODUCT_COPY_FILES += vendor/aosp/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip
+     PRODUCT_COPY_FILES += vendor/dosp/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip
 else
      $(warning Defined bootanimation res is wrong, using generic bootanimation )
-     PRODUCT_COPY_FILES += vendor/aosp/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip
+     PRODUCT_COPY_FILES += vendor/dosp/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip
 endif
