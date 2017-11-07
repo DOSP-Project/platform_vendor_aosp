@@ -1,4 +1,4 @@
-# Copyright (C) 2017 AospExtended ROM
+# Copyright (C) 2017 DOSP Project 
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,28 +13,28 @@
 # limitations under the License.
 
 #Extended Versioning
-EXTENDED_VERSION = v5.0
+EXTENDED_VERSION = v8.0
 
 #ifndef EXTENDED_BUILD_TYPE
-    EXTENDED_BUILD_TYPE := ALPHA
-    PLATFORM_VERSION_CODENAME := ALPHA
+    EXTENDED_BUILD_TYPE := DEV-Preview
+    PLATFORM_VERSION_CODENAME := DEV-Preview
 #endif
 
 ifeq ($(EXTENDED_BUILD_TYPE), OFFICIAL)
 
 # AEXOTA
-$(call inherit-product-if-exists, vendor/aosp/config/ota.mk)
+$(call inherit-product-if-exists, vendor/dosp/config/ota.mk)
 
 endif
 
-EXTENDED_MOD_VERSION := AospExtended-$(EXTENDED_VERSION)-$(shell date -u +%Y%m%d-%H%M)-$(EXTENDED_BUILD_TYPE)
+EXTENDED_MOD_VERSION := DOSP-$(EXTENDED_VERSION)-$(shell date -u +%Y%m%d-%H%M)-$(EXTENDED_BUILD_TYPE)
 
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.extended.version=$(EXTENDED_VERSION) \
   ro.extended.releasetype=$(EXTENDED_BUILD_TYPE) \
   ro.modversion=$(EXTENDED_MOD_VERSION)
   
-EXTENDED_DISPLAY_VERSION := AospExtended-$(EXTENDED_VERSION)-$(EXTENDED_BUILD_TYPE)
+EXTENDED_DISPLAY_VERSION := DOSP-$(EXTENDED_VERSION)-$(EXTENDED_BUILD_TYPE)
 
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.extended.display.version=$(EXTENDED_DISPLAY_VERSION)
