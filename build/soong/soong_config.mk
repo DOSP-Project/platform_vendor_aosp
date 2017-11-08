@@ -1,5 +1,5 @@
 # Insert new variables inside the Aosp structure
-aosp_soong:
+dosp_soong:
 	$(hide) mkdir -p $(dir $@)
 	$(hide) (\
 	echo '{'; \
