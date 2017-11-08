@@ -41,8 +41,7 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     Stk \
     Turbo \
-    ViaBrowser \
-    AEXPapers \
+    TuikBrowser \
     Phonograph \
     WallpaperPickerGoogle
 
