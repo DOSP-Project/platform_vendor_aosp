@@ -1,4 +1,4 @@
-# Copyright (C) 2017 AospExtended
+# Copyright (C) 2017 DOSP-Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,8 +13,8 @@
 # limitations under the License.
 
 # Inherit common AOSP stuff
-$(call inherit-product, vendor/aosp/config/common.mk)
+$(call inherit-product, vendor/dosp/config/common.mk)
 
-$(call inherit-product, vendor/aosp/config/telephony.mk)
+$(call inherit-product, vendor/dosp/config/telephony.mk)
 
-$(call inherit-product, vendor/aosp/config/aex_props.mk)
+$(call inherit-product, vendor/dosp/config/dosp_props.mk)
