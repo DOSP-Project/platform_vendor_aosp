@@ -1,5 +1,3 @@
-#!/bin/bash
-#
 # Copyright (C) 2016 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -662,8 +660,8 @@ function oat2dex() {
     local OAT=
 
     if [ -z "$BAKSMALIJAR" ] || [ -z "$SMALIJAR" ]; then
-        export BAKSMALIJAR="$JDC_ROOT"/vendor/aosp/build/tools/smali/baksmali.jar
-        export SMALIJAR="$JDC_ROOT"/vendor/aosp/build/tools/smali/smali.jar
+        export BAKSMALIJAR="$JDC_ROOT"/vendor/dosp/build/tools/smali/baksmali.jar
+        export SMALIJAR="$JDC_ROOT"/vendor/dosp/build/tools/smali/smali.jar
     fi
 
     # Extract existing boot.oats to the temp folder
