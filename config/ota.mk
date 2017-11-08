@@ -1,4 +1,4 @@
-# Copyright (C) 2017 AospExtended ROM
+# Copyright (C) 2017 DOSP ROM
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,10 +14,10 @@
 
 
 PRODUCT_PACKAGES += \
-        AEXOTA \
+        DesiOTA \
         libbypass
 
 PRODUCT_PROPERTY_OVERRIDES += \
-        ro.ota.romname=AospExtended-ROM \
+        ro.ota.romname=DOSP-ROM \
         ro.ota.version=$(shell date +"%Y%m%d") \
-	ro.ota.manifest=http://downloads.aospextended.com/aexota/$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
+	ro.ota.manifest=http://dosp-project.github.io/ota/$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
